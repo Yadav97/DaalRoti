@@ -1,0 +1,256 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>DaalRoti | Best Indian Restaurant</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet">
+  
+  <!-- font awesome for knife and spoon -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+ 
+  <link href='https://fonts.googleapis.com/css?family=Phudu&family=Oxygen:400,300,700' rel='stylesheet' type='text/css'>
+
+
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+
+<body>
+ 
+  <header>
+    <nav id="header-nav" class="navbar navbar-expand-lg navbar-default">
+      <div class="container">
+
+
+        <div class="navbar-header">
+          <a class="navbar-brand" href="index.html">
+
+            <!-- d-none(Hidden on all) d-lg-block(Hidden only on md)-- hide on screens smaller than lg -->
+            <!-- float-start is used to float left the elemtn in bootstarp new version not pull left  (https://getbootstrap.com/docs/5.0/utilities/float/) -->
+
+
+            <!-- name of the restaurant and the image logo-->
+
+            <img id="logo-img" src="images/images.jpeg" alt="Logo"
+              class="d-inline-block align-text-top float-start d-none d-sm-none d-lg-block">
+            <h1> DaalRoti Indian Restaurant</h1>
+         
+          </a>
+        
+
+
+
+          <img id="star" src="images/starmichelin.png" height="18px" width="18px" alt="Kosher certification">
+          <span id="subhead" class="text-dark">Authentic Indian Food</span>
+          
+          
+          <!-- collapsible button of menu -->
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo01"
+          aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        </div>
+        <!-- navbar-header ends here -->
+        
+
+
+        <!-- <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo01"
+          aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button> -->
+
+        <div class="float-start">
+          <div class="collapse navbar-collapse " id="navbarTogglerDemo01">
+            <a class="navbar-brand" href="#"></a>
+            
+
+          
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0" id="nav-list">
+              <li class="d-block d-sm-none active nav-tem">
+                <a class="nav-link active" aria-current=" page" href="index.html">
+                  <span class="fa-solid fa-house"></span><br> Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link active"  aria-current="page" href=""><span class="fa-solid fa-utensils"></span><br>
+                  Menu</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="#"><span class="fa-solid fa-info-circle"></span><br>
+                  About</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="#"><span class="fa-solid fa-award"></span><br>
+                  Awards</a>
+              </li>
+            
+
+              <li class="nav-item d-none d-sm-block" id="phone">
+                <a class="nav-link active" aria-current="page" href="tel:0000000000"><span>000-000-0000</span></a><div>* We Deliver</div>
+              </li>
+              <!-- #nav-list -->
+            </ul>
+          </div>
+        </div>
+      
+      
+      </div> <!--.container-->
+    </nav>   <!--#header-nav--> 
+  </header>
+  <!-- Header section khatam -->
+
+  <!-- collapsible phone number -->
+  <div id="call-btn" class="d-sm-none">
+    <a class="btn" href="tel:000-000-0000">
+    <span class="fa-solid fa-phone"></span>
+    000-000-0000
+    </a>
+  </div>
+  <div id="xs-deliver" class="text-center d-sm-none">* We Deliver</div>
+
+
+
+
+  <!-- Categories listed  -->
+
+  <div id= "main-content" class="container">
+
+    <h2 id="menu-categories-title" class="text-center">Menu Categories</h2>
+     <div class="text-center">
+        Substituting white rice with brown rice or fried rice after 3:00pm will be &#8377.30 for a pint and &#8377.60 for a quart.
+     </div>
+    <section class="row">
+      <!-- here each div below -- md device par 3 column lega so total 4 div(4 boxes) show honge md,lg device par and sm device --  3 columns show homge because each div take 4 columns so 12/4 = 3 and show on-->
+
+      <div class="col-md-3 col-sm-4 col-xs-6 ">
+        <a href="single-category.html">
+          <div class="category-tile">
+            <img width="200" height="200" src="images/menu/B/B.jpg" alt="Lunch">
+            <span>Lunch</span>
+          </div>
+        </a>
+      </div>
+
+      <div class="col-md-3 col-sm-4 col-xs-6 ">
+        <a href="single-category.html">
+          <div class="category-tile">
+            <img width="200" height="200" src="images/menu/B/breakfast.jpeg" alt="Lunch">
+            <span>Breakfast</span>
+          </div>
+        </a>
+      </div>
+
+      <div class="col-md-3 col-sm-4 col-xs-6 ">
+        <a href="single-category.html">
+          <div class="category-tile">
+            <img width="200" height="200" src="images/menu/B/B.jpg" alt="Lunch">
+            <span>Appetizers</span>
+          </div>
+        </a>
+      </div>
+      <div class="col-md-3 col-sm-4 col-xs-6 ">
+        <a href="single-category.html">
+          <div class="category-tile">
+            <img width="200" height="200" src="images/menu/B/chakna.jpeg" alt="Lunch">
+            <span>Chakna</span>
+          </div>
+        </a>
+      </div>
+      <div class="col-md-3 col-sm-4 col-xs-6 ">
+        <a href="single-category.html">
+          <div class="category-tile">
+            <img width="200" height="200" src="images/menu/B/B.jpg" alt="Lunch">
+            <span>Dessert</span>
+          </div>
+        </a>
+      </div>
+      <div class="col-md-3 col-sm-4 col-xs-6 ">
+        <a href="single-category.html">
+          <div class="category-tile">
+            <img width="200" height="200" src="images/menu/B/B.jpg" alt="Lunch">
+            <span>Soups</span>
+          </div>
+        </a>
+      </div>
+      <div class="col-md-3 col-sm-4 col-xs-6 ">
+        <a href="single-category.html">
+          <div class="category-tile">
+            <img width="200" height="200" src="images/menu/B/B.jpg" alt="Lunch">
+            <span>Non-veg</span>
+          </div>
+        </a>
+      </div>
+      <div class="col-md-3 col-sm-4 col-xs-6 ">
+        <a href="single-category.html">
+          <div class="category-tile">
+            <img width="200" height="200" src="images/menu/B/B.jpg" alt="Lunch">
+            <span>Salads</span>
+          </div>
+        </a>
+      </div>
+      <div class="col-md-3 col-sm-4 col-xs-6 ">
+        <a href="single-category.html">
+          <div class="category-tile">
+            <img width="200" height="200" src="images/menu/B/B.jpg" alt="Lunch">
+            <span>Raita</span>
+          </div>
+        </a>
+      </div>
+    </section>
+    
+  </div><!--end of #main-content-->
+
+
+
+  <!-- footer -->
+  <footer class="panel-footer">
+    <div class="container">
+
+      <div class="row">
+
+        <!-- timing hours section-->
+        <section id="hours" class="col-sm-4">
+          <span>Hours:</span><br>
+          Sun-Thurs: 11:15am - 10:00pm<br>
+          Fri: 11:15am - 2:30pm<br>
+          Saturday Closed
+          <hr class="d-block d-sm-none">
+          <!-- <hr class="d-none d-sm-block"> -->
+
+          <!-- <hr class="visible-xs"> -->
+          <!--old boostrap that says visible only when device is xs(device width is less than 576px)-->
+        </section>
+
+        <!-- address setion -->
+        <section id="address" class="col-sm-4">
+          <span>Address:</span><br>
+          0000 Reisterstown Road<br>
+          XYXYXYXYX, XX 00000
+          <p>* Delivery area within 20-30 kms, with minimum order of &#8377;.500 plus 	&#8377;.30 charge for all deliveries.</p>
+          <hr class="d-block d-sm-none">
+        </section>
+
+        <!-- testimonials sections -->
+        <section id="testimonials" class="col-sm-4">
+          <span class="test">Testimonials:</span>
+          <p>"The best Authentic Indian restaurant I've been to! And that's saying a lot, since I've been to many!"</p>
+          <p>"Amazing food! Great service! Couldn't ask for more! I'll be back again and again!"</p>
+        </section>
+      </div><!-- .row ends-->
+
+      <div class="text-center">&copy; Copyright <a href="index.html" style="text-decoration: none;color: white;">DaalRoti Indian Restaurant 2023</a></div>
+    </div><!-- .container ends-->
+  </footer>
+
+
+
+
+
+
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="./js/script.js"></script>
+</body>
+
+</html>

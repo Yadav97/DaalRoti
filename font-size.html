@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Setting Font Size</title>
+<style>
+body {
+  font-size: 120%;
+}
+</style>
+</head>
+<body>
+<div>Regular text</div>
+<div style="font-size: 2em;">2em text
+    <!-- it's a relative size.
+It's relative to something.
+And for this div where it says 2em text, what this is saying is it's
+relative to whatever the font size is at the moment we're applying it.
+Since we set the font size to 120% in the entire body,
+this div also received at 120% and when you combine this font size with this one,
+this basically says I want to increase the font two times of whatever a 120 was.  -->
+  <div style="font-size: 2em;">4em text
+    <!-- this div font size is parentfontsize*2em -- 2em*2em -- 38.4*2 --76.8px  -->
+
+
+    <div style="font-size: .5em;">2em again!</div>
+
+    <!-- size --parentsize*.5em -- 76.8*.5 --38.4px -->
+  </div>
+</div>
+</body>
+</html>

@@ -1,0 +1,21 @@
+<div class="col-md-3 col-sm-4 col-xs-6 col-xxs-12">
+    <a href="#" onclick="$dc.loadMenuItems('{{short_name}}');">
+      <div class="category-tile">
+        <img width="200" height="200" src="images/menu/{{short_name}}/{{short_name}}.jpg" alt="{{name}}">
+        <span>{{name}}</span>
+      </div>
+    </a>
+</div>
+
+<!-- this snippet  has one category or HTML for just one category.
+And the reason that is, is because as we get an array of these categories or array of objects from (https://coursera-jhu-default-rtdb.firebaseio.com/categories.json),
+we're going to loop over that array and every time we get a category with
+this information, we're going to want to populate this little snippet and
+then make a copy of it and then insert it and keep building up our HTML.
+So this is what the snippet is about.
+This is really something that is more like a template.  -->
+
+<!-- and in the json object from above link we have one property/key called "short_name" and also have "name" property/key , so we take that key and put its value in above html -->
+
+<!-- like images/L/L.jpg  -->   
+<!-- here L is short_name value which is a folder actually in our structure -->

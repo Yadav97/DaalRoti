@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Positioning Elements</title>
+<style>
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+h1 {
+  margin-bottom: 15px;
+}
+
+div#container {
+  background-color: #00FFFF;
+  position: relative;
+  
+}
+p {
+  width: 50px;
+  height: 50px;
+  border: 1px solid black;
+  margin-bottom: 15px;
+}
+#p1 {
+  background-color: #A52A2A;
+  position: relative;
+  /* 1. now we set an anchor on the edges of box1  and we use offsets to move the anchor to new position from its normal position and that leftover space of box1 is not talen up by other boxs*/
+  left: 65px;
+  top: 65px;
+}
+#p2 {
+  background-color: #DEB887;
+}
+
+/* now move p3 box to at the position of p1 box */
+#p3 {
+  background-color: #5F9EA0;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  /* 2here this box go to top left of the browser instead of at the p1 box posiotin why? */
+  /* because position:absolute  only work when its nerest ancestor positioning is set other than static so ancestor of p3 is div and its position is not set and then its ancestor is body whic does not have posiotioning set then nearest ancestor is html which have positioning set to relative by-default thats why this box is moved upto left top corenr of thr browser window so set position relative in div container so this box positiong is set relative to div positioning see definition of absolute pos in notes*/
+  
+}
+#p4 {
+  background-color: #FF7F50;
+}
+
+</style>
+</head>
+<body>
+<h1>Positioning Elements</h1>
+
+<div id="container">
+  <p id="p1"></p>
+  <p id="p2"></p>
+  <p id="p3"></p>
+  <p id="p4"></p>
+</div>
+
+</body>
+</html>

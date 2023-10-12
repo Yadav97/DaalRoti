@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<!-- the name of this meta tag, is called viewport.
+And what we need to tell it is, that the content of our viewport, is first of all,
+consider its width to be device width, don't try to zoom out and also,
+its initial scale to be one and we'll close the meta tag.  -->
+
+<!-- he browser will consider the device
+width as the width of the viewport and its initial scale factor will be one,
+meaning it won't scale anything up or down.  -->
+
+<!-- we added this line above bcuase the fonts zoomed out  What its telling you is is that its only 40% of its 100% zoom.  and
+this is really a default feature on all the phones.
+They try to zoom out on websites that don't tell them to do anything different.
+So, they could try to fit the entire content into the viewport of the phone.
+So, how do we tell the phone's browser that, no, this is actually a responsive
+website and you don't need to try to zoom out, just stay at the regular zoom level.
+ -->
+
+<title>Responsive Layout</title>
+<style>
+
+/********** Base styles **********/
+* {
+  box-sizing: border-box;
+}
+h1 {
+  margin-bottom: 15px;
+}
+
+p {
+  border: 1px solid black;
+  background-color: #A52A2A;
+  width: 90%;
+  height: 150px;
+  margin-right: auto;
+  margin-left: auto;
+  font-family: Helvetica;
+  color: white;
+}
+
+/* Simple Responsive Framework. */
+.row {
+  width: 100%;
+  border: 2px solid brown;
+}
+
+
+
+/********** Large devices only **********/
+
+/* we say if device width is atleast 1200 px or more than 1200px apply this css  */
+@media (min-width: 1200px) {
+  .col-lg-1, .col-lg-2, .col-lg-3, .col-lg-4, .col-lg-5, .col-lg-6, .col-lg-7, .col-lg-8, .col-lg-9, .col-lg-10, .col-lg-11, .col-lg-12 {
+    float: left;
+    border: 1px solid green;
+  }
+
+
+
+  /* Note -- here we write col-lg1 to col-lg2 just because of our understanding columns iwe remove col-lg1 to col-lg2 except col-lg3 from css -- no effect on page [same concept for col-md1 to col-md12 except col-md6]*/
+
+
+
+  /* if its 12 column layout please apply width of 1st column = 8.33% which is 100 / 12 = 8.33% width o each column */
+  .col-lg-1 {
+    width: 8.33%;
+  }
+
+/* 100/2 = 8.33*2 = 16.66% */
+  .col-lg-2 {
+    width: 16.66%;
+  }
+
+  /* 8.33*3 = 24.99 0or 25% */
+  .col-lg-3 {
+    width: 25%;
+  }
+
+
+  .col-lg-4 {
+    width: 33.33%;
+  }
+  .col-lg-5 {
+    width: 41.66%;
+  }
+  .col-lg-6 {
+    width: 50%;
+  }
+  .col-lg-7 {
+    width: 58.33%;
+  }
+  .col-lg-8 {
+    width: 66.66%;
+  }
+  .col-lg-9 {
+    width: 74.99%; 
+  }
+  .col-lg-10 {
+    width: 83.33%;
+  }
+  .col-lg-11 {
+    width: 91.66%;
+  }
+  .col-lg-12 {
+    width: 100%;
+  }
+}
+
+
+/*Now when the browser size gets to less than 950 pixels,
+none of these classes will exist as far as the browser will concern.
+And what's going to happen then?
+Well our divs will no longer be floated because the floating is only defined
+inside the media queries which means they will behave just like regular block level
+elements and they will automatically stack one on top of the other.
+So as the devices get smaller and smaller, I should really have one column
+with each one of these items stacked one on top of the other.
+ */
+/********** Medium devices only **********/
+@media (min-width: 950px) and (max-width: 1199px) {
+  .col-md-1, .col-md-2, .col-md-3, .col-md-4, .col-md-5, .col-md-6, .col-md-7, .col-md-8, .col-md-9, .col-md-10, .col-md-11, .col-md-12 {
+    float: left;
+    border: 1px solid green;
+  }
+  .col-md-1 {
+    width: 8.33%;
+  }
+  .col-md-2 {
+    width: 16.66%;
+  }
+  .col-md-3 {
+    width: 25%;
+  }
+  .col-md-4 {
+    width: 33.33%;
+  }
+  .col-md-5 {
+    width: 41.66%;
+  }
+  .col-md-6 {
+    width: 50%;
+  }
+  .col-md-7 {
+    width: 58.33%;
+  }
+  .col-md-8 {
+    width: 66.66%;
+  }
+  .col-md-9 {
+    width: 74.99%;
+  }
+  .col-md-10 {
+    width: 83.33%;
+  }
+  .col-md-11 {
+    width: 91.66%;
+  }
+  .col-md-12 {
+    width: 100%;
+  }
+}
+
+
+/* NOTE --> since these classes don't really exist outside of these media queries,
+it means that I can specify for
+different devices, different layouts depending on device size.
+So for a smaller device, for example, specify layout expressed in md,
+in medium devices columns, or
+medium devices classes and for a larger device I could express the same thing.
+With lg, larger devices, so I could give the same element two different classes and
+I know I'm guaranteed that only one of them
+will apply at times since my media queries don't overlap.  
+So both classes will never really be existing at the same time.
+*/
+
+/* ex <p class = "col-lg-2 col-md-3">content here</p> */
+
+</style>
+</head>
+<body>
+<h1>Responsive Layout</h1>
+
+<!-- lg -- large, md -- medium -->
+<!-- col-lg-3 means take 25% width of screen which is 3 columns so in large devices we use 3 columns to make 1 box and in col-md-6 in mediium devices we use 6 columns to make 1 box of size width is = 6*8.33 =  50% (49.98%) -->
+
+
+<div class="row">
+  <div class="col-lg-3 col-md-6"><p>Item 1</p></div>
+  <div class="col-lg-3 col-md-6"><p>Item 2 Wow this is cool</p></div>
+  <div class="col-lg-3 col-md-6"><p>Item 3</p></div>
+  <div class="col-lg-3 col-md-6"><p>Item 4</p></div>
+  <div class="col-lg-3 col-md-6"><p>Item 5 This is cool</p></div>
+  <div class="col-lg-3 col-md-6"><p>Item 6</p></div>
+  <div class="col-lg-3 col-md-6"><p>Item 7</p></div>
+  <div class="col-lg-3 col-md-6"><p>Item 8</p></div>
+</div>
+
+</body>
+</html>

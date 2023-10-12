@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>The Box Model</title>
+<style>
+
+*{
+    
+    box-sizing: border-box;
+    margin: 0px;
+    padding: 0px;
+}
+/* now as we know that from box-model1.html that every html element has a bdefault property content-box so we dont want to write box-sizing for every element in css so it is better to put this propperty in body{} */
+
+/* as we put in the body wee see that box-sizinf=g is not work for #box and no other element in this page because box-sizing property is not inheritable we see in conflict resolution  */
+
+/* we use *{} means * -- seelcts all the elements from this page and apply this property to all elements in tha page and * doe not inherit this propertyy to all children but selects the all eleementsn */
+
+
+/* here in box model diagram of h1 we see margin-top is of 21.44 so we need to remove it so even though we put margin:0px in body{} ,this is not work because it  Body says anything that is below me and
+inside of me is going to have the margin inherited.
+But that's only if you don't override it specifically for that element.
+As you see here, the user agent stylesheet has a selector h1
+that is specifically overriding the margin, which therefore, wins.  */
+
+/* so we need to put in *{}  and remove from body{}*/
+
+
+
+body {
+    background-color: gray;
+  
+    
+}
+
+#box {
+  background-color: blue;
+  border: 5px solid red;
+  padding: 10px 10px 10px 10px;
+  width: 300px;
+  /* margin: 40px;  let see cumulative margin example so comment out this margin */
+    /* we give margin bottom to h1 30px */
+    /* margin-top: 20px; */
+    /* now margi collapse and margin is 30px between box and h1 */
+    margin-top:50px ;
+    /* again margin collapse and margin is 50px */
+
+
+}
+
+
+#content {
+  background-color: #90EE90; /*green*/
+}
+
+h1 {
+  margin-bottom: 30px;
+}
+
+</style>
+</head>
+<body>
+
+<h1>Box Model</h1>
+
+<div id="box">
+  <div id="content">Lorem ipsum dolor sit amet, consectetur adipisicing elit. </div>
+</div>
+
+
+</body>
+</html>

@@ -1,0 +1,295 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>DaalRoti | Best Indian Restaurant</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet">
+  
+  <!-- font awesome for knife and spoon -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+ 
+  <link href='https://fonts.googleapis.com/css?family=Phudu&family=Oxygen:400,300,700' rel='stylesheet' type='text/css'>
+
+
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+
+<body>
+ 
+  <header>
+    <nav id="header-nav" class="navbar navbar-expand-lg navbar-default">
+      <div class="container">
+
+
+        <div class="navbar-header">
+          <a class="navbar-brand" href="index.html">
+
+            <!-- d-none(Hidden on all) d-lg-block(Hidden only on md)-- hide on screens smaller than lg -->
+            <!-- float-start is used to float left the elemtn in bootstarp new version not pull left  (https://getbootstrap.com/docs/5.0/utilities/float/) -->
+
+
+            <!-- name of the restaurant and the image logo-->
+
+            <img id="logo-img" src="images/images.jpeg" alt="Logo"
+              class="d-inline-block align-text-top float-start d-none d-sm-none d-lg-block">
+            <h1> DaalRoti Indian Restaurant</h1>
+         
+          </a>
+        
+
+
+
+          <img id="star" src="images/starmichelin.png" height="18px" width="18px" alt="Kosher certification">
+          <span id="subhead" class="text-dark">Authentic Indian Food</span>
+          
+          
+          <!-- collapsible button of menu -->
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo01"
+          aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        </div>
+        <!-- navbar-header ends here -->
+        
+
+
+        <!-- <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo01"
+          aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button> -->
+
+        <div class="float-start">
+          <div class="collapse navbar-collapse " id="navbarTogglerDemo01">
+            <a class="navbar-brand" href="#"></a>
+            
+
+          
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0" id="nav-list">
+                <li class="d-block d-sm-none active nav-tem">
+                    <a class="nav-link active" aria-current=" page" href="index.html">
+                      <span class="fa-solid fa-house"></span><br> Home</a>
+                  </li>
+              <li class="nav-item">
+                <a class="nav-link active"  aria-current="page" href=""><span class="fa-solid fa-utensils"></span><br>
+                  Menu</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="#"><span class="fa-solid fa-info-circle"></span><br>
+                  About</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="#"><span class="fa-solid fa-award"></span><br>
+                  Awards</a>
+              </li>
+            
+
+              <li class="nav-item d-none d-sm-block" id="phone">
+                <a class="nav-link active" aria-current="page" href="tel:0000000000"><span>000-000-0000</span></a><div>* We Deliver</div>
+              </li>
+              <!-- #nav-list -->
+            </ul>
+          </div>
+        </div>
+      
+      
+      </div> <!--.container-->
+    </nav>   <!--#header-nav--> 
+  </header>
+  <!-- Header section khatam -->
+
+  <!-- collapsible phone number -->
+  <div id="call-btn" class="d-sm-none">
+    <a class="btn" href="tel:000-000-0000">
+    <span class="fa-solid fa-phone"></span>
+    000-000-0000
+    </a>
+  </div>
+  <div id="xs-deliver" class="text-center d-sm-none">* We Deliver</div>
+
+
+
+
+  <!-- single categories  listed  -->
+
+  <div id= "main-content" class="container">
+
+    <h2 id="menu-categories-title" class="text-center">Lunch Menu</h2>
+    <div class="text-center">Lunch is not served until after 1pm.</div>
+
+    <!-- now we want that each div takes 6 columns so we need  grid so we need to use row class -->
+    <section class="row">
+        <!--1st menu item tile that takes 6 columns on medium devices-->
+        <div class="menu-item-tile col-md-6">
+
+            <!-- now again we divide the 12 column grid inside 6 columns so image takes 5 columns and then desc of image takes 7 columns inised 6 col grid -->
+            <!-- again in order to create 12 column grid inside 6 column grid we need to use the row class -->
+            <div class="row">
+              <div class="col-sm-5">
+                    <div class="menu-item-photo">
+                        <!-- here we make above class relative and below div absolute so that tgis div is realtive to the parent and we use right;bottom property to set the div text.  -->
+                        <div>D01</div>
+
+                        <img class="img-responsive" width="250" height="150" src="images/menu/B/B-1.jpg" alt="Item">
+                    </div>
+                    <div class="menu-item-price">&#8377;.40<span> (Half)</span> &#8377;.70 <span>(Full)</span></div>
+                </div>
+                <!-- again desc of image takes 7 columns -->
+              <div class="menu-item-description col-sm-7">
+                    <h3 class="menu-item-title">ChowMein</h3>
+                    <p class="menu-item-details">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eaque inventore esse minima incidunt impedit. Asperiores, voluptatem. Sint aspernatur provident, rem odio dolorem eaque.chunks of chicken, breaded and deep-fried with sauce containing orange peels; white meat by request, $1 more for white meat.chunks of chicken, breaded and deep-fried with sauce containing orange peels; white meat by request, $1 more for white meat.chunks of chicken, breaded and deep-fried with sauce containing orange peels; white meat by request, $1 more for white meat.chunks of chicken, breaded and deep-fried with sauce containing orange peels; white meat by request, $1 more for white meat.chunks of chicken, breaded and deep-fried with sauce containing orange peels; white meat by request, $1 more for white meat.chunks of chicken, breaded and deep-fried with sauce containing orange peels; white meat by request, $1 more for white meat.</p>
+              </div>
+            </div>
+            <hr class="d-block d-sm-none">
+            <!-- visible on xs screens -->
+          </div>
+          
+          <!-- Note -- what if the details of a item is very long so then our layout is bad like do3 is pushed to right so to dealt with we use        
+        <div class="clearfix visible-lg-block visible-md-block"></div>
+        after every 2nd menu item but today no need to use this because already row class dealt with it
+          -->
+
+
+
+
+          <!-- 2nd menu item in right side  -->
+          <div class="menu-item-tile col-md-6">
+
+            <!-- now again we divide the 12 column grid inside 6 columns so image takes 5 columns and then desc of image takes 7 columns inised 6 col grid -->
+            <!-- again in order to create 12 column grid inside 6 column grid we need to use the row class -->
+            <div class="row">
+              <div class="col-sm-5">
+                    <div class="menu-item-photo">
+                        <!-- here we make above class relative and below div absolute so that tgis div is realtive to the parent and we use right;bottom property to set the div text.  -->
+                        <div>D02</div>
+
+                        <img class="img-responsive" width="250" height="150" src="images/menu/B/B.jpg" alt="Item">
+                    </div>
+                    <div class="menu-item-price">&#8377;.250<span> (Thali)</span> &#8377;.400 <span>(Maharaja Thali)</span></div>
+                </div>
+                <!-- again desc of image takes 7 columns -->
+              <div class="menu-item-description col-sm-7">
+                    <h3 class="menu-item-title">Thaali</h3>
+                    <p class="menu-item-details">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eaque inventore esse minima incidunt impedit. Asperiores, voluptatem. </p>
+              </div>
+            </div>
+            <hr class="d-block d-sm-none">
+            <!-- visible on xs screens -->
+          </div>
+
+          <div class="clearfix visible-lg-block visible-md-block"></div>
+          <!-- 3rd item menu -->
+          <div class="menu-item-tile col-md-6">
+
+         
+            <div class="row">
+              <div class="col-sm-5">
+                    <div class="menu-item-photo">
+                        
+                        <div>D03</div>
+
+                        <img class="img-responsive" width="250" height="150" src="images/menu/B/chole.jpeg" alt="Item">
+                    </div>
+                    <div class="menu-item-price">&#8377;.30<span> (2 Pc.)</span> &#8377;.70 <span>(4 Pc.)</span></div>
+                </div>
+                <!-- again desc of image takes 7 columns -->
+              <div class="menu-item-description col-sm-7">
+                    <h3 class="menu-item-title">Chole Bhature</h3>
+                    <p class="menu-item-details">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eaque inventore esse minima incidunt impedit. Asperiores, voluptatem. </p>
+              </div>
+            </div>
+            <hr class="d-block d-sm-none">
+            <!-- visible on xs screens -->
+          </div>
+
+
+
+          <!-- 4th item menu -->
+
+          <div class="menu-item-tile col-md-6">
+
+         
+            <div class="row">
+              <div class="col-sm-5">
+                    <div class="menu-item-photo">
+                        
+                        <div>D04</div>
+
+                        <img class="img-responsive" width="250" height="150" src="images/menu/B/dosa.jpeg" alt="Item">
+                    </div>
+                    <div class="menu-item-price">&#8377;.60<span> (Masala Dosa)</span> &#8377;.80 <span>(Butter Dosa)</span></div>
+                </div>
+                <!-- again desc of image takes 7 columns -->
+              <div class="menu-item-description col-sm-7">
+                    <h3 class="menu-item-title">Dosa</h3>
+                    <p class="menu-item-details">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eaque inventore esse minima incidunt impedit. Asperiores, voluptatem. </p>
+              </div>
+            </div>
+            <hr class="d-block d-sm-none">
+            <!-- visible on xs screens -->
+          </div>
+
+        
+
+
+
+
+    </section>
+     
+  </div><!--end of #main-content-->
+
+
+
+  <!-- footer -->
+  <footer class="panel-footer">
+    <div class="container">
+
+      <div class="row">
+
+        <!-- timing hours section-->
+        <section id="hours" class="col-sm-4">
+          <span>Hours:</span><br>
+          Sun-Thurs: 11:15am - 10:00pm<br>
+          Fri: 11:15am - 2:30pm<br>
+          Saturday Closed
+          <hr class="d-block d-sm-none">
+          <!-- <hr class="d-none d-sm-block"> -->
+
+          <!-- <hr class="visible-xs"> -->
+          <!--old boostrap that says visible only when device is xs(device width is less than 576px)-->
+        </section>
+
+        <!-- address setion -->
+        <section id="address" class="col-sm-4">
+          <span>Address:</span><br>
+          0000 Reisterstown Road<br>
+          XYXYXYXYX, XX 00000
+          <p>* Delivery area within 20-30 kms, with minimum order of &#8377;.500 plus 	&#8377;.30 charge for all deliveries.</p>
+          <hr class="d-block d-sm-none">
+        </section>
+
+        <!-- testimonials sections -->
+        <section id="testimonials" class="col-sm-4">
+          <span class="test">Testimonials:</span>
+          <p>"The best Authentic Indian restaurant I've been to! And that's saying a lot, since I've been to many!"</p>
+          <p>"Amazing food! Great service! Couldn't ask for more! I'll be back again and again!"</p>
+        </section>
+      </div><!-- .row ends-->
+
+      <div class="text-center">&copy; Copyright <a href="index.html" style="text-decoration: none;color: white;">DaalRoti Indian Restaurant 2023</a></div>
+    </div><!-- .container ends-->
+  </footer>
+
+
+
+
+
+
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="./js/script.js"></script>
+</body>
+
+</html>

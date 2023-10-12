@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>The Box Model</title>
+<style>
+
+body {
+  background-color: gray;
+  margin: 0px;
+  padding: 0px;
+ 
+}
+
+#box {
+  background-color: blue;
+  border: 5px solid red;
+  padding: 10px 10px 10px 10px;
+  margin: 40px;
+  width: 300px;
+  box-sizing: border-box;
+}
+/* the width of box is not the 300px actually it is 330px see box model of this box in layout tab and you see 10px(paddingleft)+5px(border)+300(widthof box)+5px(border right)+10px(padding right) = 330px so actual visible box we see on browser is 330px not 300px becuase depending on the border or padding you change the widht of box is chaange */
+
+/* So even though we said I want the width of the box to be 300,
+it turns out that we aren't really setting the width of the box,
+we're actually setting the width of the content.  */
+
+/*its annoying  and we want to chnage that so it turns out that by default, the box sizing is actually a property of every HTML element and by default it's actually set to content box, which means when you specify it's height and width,
+you're specifying the height and width of the content box, not the entire thing */
+
+/* so write box-sizing:border-box and hence take a look here in inspect element, 200 plus 30 plus 30,
+that's 260, plus 20 plus 20, that's another 40, that's 300.
+ */
+
+
+
+#content {
+  background-color: #90EE90; /*green*/
+}
+
+h1 {
+  margin-bottom: 30px;
+}
+
+</style>
+</head>
+<body>
+
+<h1>Box Model</h1>
+
+<div id="box">
+  <div id="content">Lorem ipsum dolor sit amet, consectetur adipisicing elit. </div>
+</div>
+
+
+</body>
+</html>

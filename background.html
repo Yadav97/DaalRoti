@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Background</title>
+<style>
+#bg {
+  width: 500px;
+  height: 500px;
+  background-color: antiquewhite;
+  /* background-image: url("background.jpeg");
+  background-repeat: no-repeat; */
+  /* background-position:x axis y axis ; */
+  /* background-position: right bottom; */
+
+  /* if we give one value either x-axis or y-axis image center mein aa jaayegi according to the given value */
+  /* background-position: bottom; */
+  /* image vertically bottom mein hogi and horizontally cenetr mein */
+
+
+  /* we right all these properties in shorthand using background: propertires; */
+  background: url("background.jpeg") no-repeat right center;
+  /* but background color is removed why it happens? */
+  /* ans --> becuase we use background: prop wihtout dash so it overrides every single background-property: like background-image etc. (which have a dash) except the ones that I'm actually specifying.  use below property*/
+
+  background: url("background.jpeg") no-repeat right center antiquewhite;
+
+  
+  
+}
+
+</style>
+</head>
+<body>
+<h1>The Background Property</h1>
+
+<div id="bg">Background properties are fun!</div>
+</body>
+</html>

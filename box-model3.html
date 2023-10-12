@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>The Box Model</title>
+<style>
+
+*{
+    
+    box-sizing: border-box;
+    margin: 0px;
+    padding: 0px;
+}
+
+
+
+
+body {
+    background-color: gray;
+  
+    
+}
+
+#box {
+  background-color: blue;
+  border: 5px solid red;
+  padding: 10px 10px 10px 10px;
+  width: 300px;
+  margin-top:50px ;
+  
+  height: 100px;
+/* now putting height so height of the box is 100px so the content is spill out of the box see browser  */
+
+/* now what todo use overflow property in box */
+overflow: auto;
+/* so here  "auto" makes the content scrollable vertically only and "scroll"  makes the content scrobale in both vertically and horizontally*/
+}
+/* note -->  users absolutely hate double scrolling.
+Having the scroll bar on the side of the browser plus having to scroll inside some
+element is something that is not preferred.  */
+
+/* However, there are cases where it's perfectly normal and expected to do.
+For example, if you're looking through, let's say, terms of service, and
+you just really want to pack in your entire UI into one visible chunk,
+yet you want them to be able to scroll through some terms of service or
+something like that, or some of the content.
+A solution for your overflow being auto is certainly an acceptable one.  */
+
+
+
+#content {
+  background-color: #90EE90; /*green*/
+}
+
+h1 {
+  margin-bottom: 30px;
+}
+
+</style>
+</head>
+<body>
+
+<h1>Box Model</h1>
+
+<div id="box">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Magnam, vero vel aut voluptatum, praesentium officia sapiente laboriosam dolorem explicabo illo sit quisquam beatae iusto esse placeat temporibus mollitia earum dignissimos. </div>
+</div>
+
+
+</body>
+</html>

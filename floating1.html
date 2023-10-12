@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Floating Elements</title>
+<style>
+
+div {
+  background-color: #00FFFF;
+}
+p {
+  width: 50px;
+  height: 50px;
+  border: 1px solid black;
+  float:left ;   /*it removes the margin so give margin right */
+  margin-right:10px;
+ 
+
+
+}
+/*2. now make every box float to left by putting float:left in p{} --  */
+/* now there is a problem that div box becomes shorter and all boxes is apill out of the aqua box why ? that is Our div seemed to have completely collapsed and the only thing that's really keeping it open at all is the text that we've put in here.  */
+/* ans --> because of the same point that I made before (read 1st point)When you float elements it takes them out of the regular document flow, therefore it collapses and hide, and surrounds the last section element which has actually some text in it.
+
+In order to correct it, we need to tell the browser that when it comes to this section element, the browser should resume the regular document flow. by using clear:property */
+
+
+section
+{
+    clear: left;
+    /* 3. it is telling the browser that the section element is announcing that nothing should be allowed to be floating to the left of it(thta is nothing sould be allowed to float to left of the section element so it means section element allow nhi karta ki koi bhi element uske left mein float ho so all the elements are basicall float left of the setion jo majboori mein section element ko below jaana padega floating elements ke.). And since every single paragraph that we've been floating is floating to the left, when we save it and refresh, this should jump right below here, and so it does. basically it says clear:left - The element section is pushed below left floated elements resuming the document flow*/
+    /* And this is not restricted to the non floated elements.We can ask a floated element to resume its regular document flow, and then float it again */
+
+    /* When we use the float property, and we want the next element below (not on right or left), we will have to use the clear property */
+}
+
+
+
+#p1 {
+  background-color: #A52A2A;
+  /* 1. use float right */
+
+  /* float: right; */
+  /* so this property float makes the box p1 jumped all the way to the right, top edge of the containing element div. and leftover boxes takes up the space of p1 box and moved to top because when you float the elements, the browser takes them out of the regular document flow. And this is why the second paragraph box moves into the original spot of the first one, because as far as the regular document flow is concerned, that spot became empty.  */
+  /* Second thing to notice is that even though each one of these paragraph boxes has a margin around them, as you can see that there's a margin between each one of them right here, that margin collapses as we've learned before when it is touching the margin of another element. However, when it comes to floated elements, the margins never collapse.And this is why you now seeing the margin around the element on top.
+ */
+ /* coment the float here */
+
+
+
+}
+#p2 {
+  background-color: #DEB887;
+}
+#p3 {
+  background-color: #5F9EA0;
+  clear: left;
+  /* put all the contents below left floated elements */
+}
+#p4 {
+  background-color: #FF7F50;
+}
+
+
+
+</style>
+</head>
+<body>
+<h1>Floating Elements</h1>
+
+<div>
+  <p id="p1"></p>
+  <p id="p2"></p>
+  <p id="p3"></p>
+  <p id="p4"></p>
+  <section>This is regular content continuing after the the paragraph boxes.</section>
+</div>
+
+
+</body>
+</html>

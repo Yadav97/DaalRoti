@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Inheritance in CSS</title>
+<style>
+header.navigation p {
+  color: blue;
+  /* score --> 0 0 1 2 */
+}
+p.blurb {
+  color: red;
+/* score --> 0 0 1 1 */
+}
+/* above score wins so color is blue */
+
+
+/* uncomment below tag and score --> 0 0 0 1 even this rule applies cause we write !important property so it overrides above all css rules so this becomes more specific  */
+/* p {
+  color: green !important;
+} */
+</style>
+</head>
+<body>
+<header class="navigation">
+  <p class="blurb">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vero soluta enim aut! Nihil nam obcaecati, fugiat sint sit libero voluptate eos incidunt odio neque cum, dignissimos aperiam, magnam nisi debitis.</p>
+</header>
+</body>
+</html>
